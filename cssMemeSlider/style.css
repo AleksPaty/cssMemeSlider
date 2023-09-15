@@ -31,6 +31,7 @@ main {
     display: flex;
     width: calc(100% * 4);
     height: 78vh;
+    transition: all 0.5s;
 }
 
 .img-item {
@@ -53,15 +54,19 @@ main {
 }
 
 .text-slide {
-    width: 50%;
+    width: 55%;
     overflow-x: hidden;
 }
 .text-line {
     display: flex;
     justify-content: space-between;
-    width: calc(100% * 4);
+    width: calc(143% * 4);
     font-size: 18px;
     color: #fff;
+    transition: all 0.5s;
+}
+.text-line p {
+    width: calc(100% / 4);
 }
 
 .input-btn {
@@ -96,4 +101,21 @@ main {
 .input-btn#s3:checked ~ .under-image > .control > .label-wrapper > .labl-btn.lab3,
 .input-btn#s4:checked ~ .under-image > .control > .label-wrapper > .labl-btn.lab4 {
     background: #25282A;
+}
+
+.input-btn#s1:checked ~ .slide-view > .img-line,
+.input-btn#s1:checked ~ .under-image > .text-slide > .text-line {
+    transform: translateX(0);
+}
+.input-btn#s2:checked ~ .slide-view > .img-line,
+.input-btn#s2:checked ~ .under-image > .text-slide > .text-line {
+    transform: translateX(calc((100% / 4) * -1));
+}
+.input-btn#s3:checked ~ .slide-view > .img-line,
+.input-btn#s3:checked ~ .under-image > .text-slide > .text-line {
+    transform: translateX(calc((100% / 4) * -2));
+}
+.input-btn#s4:checked ~ .slide-view > .img-line,
+.input-btn#s4:checked ~ .under-image > .text-slide > .text-line {
+    transform: translateX(calc((25% - 100%)));
 }
