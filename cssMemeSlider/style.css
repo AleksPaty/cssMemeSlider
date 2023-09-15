@@ -119,3 +119,70 @@ main {
 .input-btn#s4:checked ~ .under-image > .text-slide > .text-line {
     transform: translateX(calc((25% - 100%)));
 }
+
+/* responsive */
+
+@media (max-width: 998px) {
+    .slider {
+        max-width: 56vw;
+    }
+    .text-slide {
+        width: 70%;
+    }
+}
+@media (max-width: 878px) {
+    .slider {
+        max-width: 60vw;
+    }
+    .text-slide {
+        width: 78%;
+    }
+}
+@media screen and (max-width: 821px) and (min-height: 1175px) {
+    .slider {
+        max-width: 62vw;
+    }
+    .img-line {
+        height: 50vh;
+    }
+}
+@media (max-width: 770px) {
+    .slider {
+        max-width: 64vw;
+    }
+}
+@media (max-width: 690px) {
+    .slider {
+        max-width: 72vw;
+    }
+}
+@media (max-width: 610px) {
+    .slider {
+        max-width: 82vw;
+    }
+}
+@media (max-width: 530px) {
+    .slider {
+        max-width: 96vw;
+    }
+    .under-image {
+        height: max-content;
+        margin-bottom: 2vh;
+        flex-direction: column-reverse;
+        gap: 2vh;
+    }
+    .text-slide {
+        width: 85%;
+    }
+    .control {
+        align-self: center;
+    }
+}
+@media (max-width: 425px) {
+    .img-line {
+        height: 55vh;
+    }
+    .text-slide {
+        width: 100%;
+    }
+}
